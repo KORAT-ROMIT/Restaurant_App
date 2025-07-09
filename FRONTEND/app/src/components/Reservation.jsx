@@ -87,6 +87,7 @@ const Reservation = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                 <p className="yoyo">Phone:</p>
                 <input
                   type="number"
                   placeholder="Phone"
