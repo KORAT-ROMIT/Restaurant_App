@@ -19,7 +19,7 @@ const reservationSchema = new mongoose.Schema({
     required: true,
   },
   time: {
-    type: Date,
+    type: Time,
     required: true,
   },
   email: {
