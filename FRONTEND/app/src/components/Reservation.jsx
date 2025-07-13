@@ -73,7 +73,7 @@ const Reservation = () => {
                   onChange={(e) => setDate(e.target.value)}
                 />
                 <input
-                  type="input"
+                  type="time"
                   placeholder="Time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
