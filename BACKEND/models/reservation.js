@@ -21,6 +21,7 @@ const reservationSchema = new mongoose.Schema({
   time: {
     type: String,
     required: true,
+      enum: ["09:00", "12:00", "15:00", "18:00", "21:00"], // example time slots
   },
   email: {
     type: String,
