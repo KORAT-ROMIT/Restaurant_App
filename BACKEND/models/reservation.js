@@ -22,6 +22,10 @@ const reservationSchema = new mongoose.Schema({
     type: String,
     required: true,
       enum: ["09:00", "12:00", "15:00", "18:00", "21:00"], // example time slots
+     validate: {
+    validator: (value) => /^([01]\d|2[0-3]):([0-5]\d)$/.test(value),
+    message: "Please enter time in HH:mm format",
+  },
   },
   email: {
     type: String,
