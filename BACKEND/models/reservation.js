@@ -19,11 +19,11 @@ const reservationSchema = new mongoose.Schema({
     required: true,
   },
   time: {
-    type: Time,
-    required: true,
-   validate: {
+     type: String,
+  required: true,
+  validate: {
     validator: function (v) {
-      return /^([01]\d|2[0-3]):([0-5]\d)$/.test(v); // Validates 00:00 to 23:59
+      return /^([01]\d|2[0-3]):([0-5]\d)$/.test(v);
     },
     message: "Provide a valid time in HH:MM format",
   },
