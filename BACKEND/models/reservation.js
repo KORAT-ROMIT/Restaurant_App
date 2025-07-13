@@ -21,6 +21,12 @@ const reservationSchema = new mongoose.Schema({
   time: {
     type: Time,
     required: true,
+    validate: {
+    validator: function (v) {
+      return /^([01]\d|2[0-3]):([0-5]\d)$/.test(v);
+    },
+    message: "Provide a valid time in HH:MM format",
+  },
   },
   email: {
     type: String,
